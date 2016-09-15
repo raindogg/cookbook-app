@@ -1,0 +1,17 @@
+<div class="container">
+<div class="row">
+<% @recipes.each do |recipe| %>
+<div class="col-md-4">
+<h3><%= link_to "#{recipe.title}", "recipes/#{recipe.id}" %></h3>
+<h6>Updated on <%= recipe.friendly_updated_at %>
+<h3>Time: <%= recipe.friendly_prep_time %></h3>
+<h4>By: <%= recipe.chef %></h4>
+<h4>Calls for:</h4>
+   <% recipe.ingredients_list.each do |ingredient| %>
+    <li><%= ingredient %></li>
+   <% end %>
+<h4>Do: <%= recipe.directions %></h4>
+</div>
+<% end %>
+</div>
+</div

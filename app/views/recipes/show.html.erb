@@ -1,0 +1,8 @@
+<h3><%= @recipe.title %></h3>
+<h5>Time: <%= @recipe.prep_time %></h5>
+<h4>By: <%= @recipe.chef %></h4>
+<h4>Calls for: <%= @recipe.ingredients %></h4>
+<h4>Do: <%= @recipe.directions %></h4>
+<%= link_to 'Home', '/recipes' %>
+<%= link_to 'Edit', "/recipes/#{ @recipe.id }/edit" %>
+<%= link_to 'Delete', "/recipes/#{ @recipe.id }", method: :delete %>
